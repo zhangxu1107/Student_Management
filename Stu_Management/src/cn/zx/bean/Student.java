@@ -112,4 +112,10 @@ public class Student {
 		this.birthday = birthday;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [sid=" + sid + ", sname=" + sname + ", age=" + age + ", gender=" + gender + ", phone=" + phone
+				+ ", hobby=" + hobby + ", info=" + info + ", birthday=" + birthday + "]";
+	}
+
 }

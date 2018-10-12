@@ -3,6 +3,7 @@ package cn.zx.service;
 import java.sql.SQLException;
 import java.util.List;
 
+import cn.zx.bean.PageBean;
 import cn.zx.bean.Student;
 
 /**
@@ -11,6 +12,14 @@ import cn.zx.bean.Student;
  *
  */
 public interface StudentService {
+	/**
+	 * 查询当页的数据
+	 * @param currentPage
+	 * @return
+	 * @throws SQLException
+	 */
+	PageBean findStudentByPage(int currentPage) throws SQLException ;
+	
 	/**
 	 * 查询所有学生
 	 * @return
@@ -24,6 +33,15 @@ public interface StudentService {
 	 * @throws SQLException
 	 */
 	Student findStudentById(int sid)  throws SQLException ;
+	
+	/**
+	 * 模糊查询， 根据姓名或者根据性别，或者两者兼有。 
+	 * @param sname
+	 * @param sgender
+	 * @return 集合
+	 * @throws SQLException
+	 */
+	List<Student> searchStudent(String sname , String sgender)  throws SQLException ;
 	
 	/**
 	 * 添加学生

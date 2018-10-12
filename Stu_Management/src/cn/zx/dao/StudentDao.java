@@ -12,6 +12,17 @@ import cn.zx.bean.Student;
  */
 public interface StudentDao {
 	
+	int PAGE_SIZE = 5; //一页显示多少条记录
+	
+	/**
+	 * 查询当页的学生数据
+	 * @param currentPage
+	 * @return
+	 * @throws SQLException
+	 */
+	List<Student> findStudentByPage(int currentPage) throws SQLException ;
+	
+	
 	/**
 	 * 查询所有学生
 	 * @return
@@ -25,6 +36,15 @@ public interface StudentDao {
 	 * @throws SQLException
 	 */
 	Student findStudentById(int sid)  throws SQLException ;
+	
+	/**
+	 * 模糊查询， 根据姓名或者根据性别，或者两者兼有。 
+	 * @param sname
+	 * @param sgender
+	 * @return 集合
+	 * @throws SQLException
+	 */
+	List<Student> searchStudent(String sname , String sgender)  throws SQLException ;
 	
 	/**
 	 * 添加学生
@@ -46,4 +66,11 @@ public interface StudentDao {
 	 * @throws SQLException
 	 */
 	void update (Student student )throws SQLException ;
+	
+	/**
+	 * 查询总的学生记录数
+	 * @return
+	 * @throws SQLException
+	 */
+	int findCount()throws SQLException ;
 }

@@ -59,4 +59,24 @@
     <servlet-name>UpdateServlet</servlet-name>
     <url-pattern>/UpdateServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SearchStudentServlet</display-name>
+    <servlet-name>SearchStudentServlet</servlet-name>
+    <servlet-class>cn.zx.servlet.SearchStudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchStudentServlet</servlet-name>
+    <url-pattern>/SearchStudentServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentListPageServlet</display-name>
+    <servlet-name>StudentListPageServlet</servlet-name>
+    <servlet-class>cn.zx.servlet.StudentListPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentListPageServlet</servlet-name>
+    <url-pattern>/StudentListPageServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
